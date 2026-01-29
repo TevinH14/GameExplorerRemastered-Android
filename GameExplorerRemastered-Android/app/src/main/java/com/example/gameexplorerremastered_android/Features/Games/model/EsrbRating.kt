@@ -1,4 +1,4 @@
-package com.example.gameexplorerremastered_android.Features.Games.model
+package com.example.gameexplorerremastered_android.features.games.model
 
 data class EsrbRating(
     val id: Int,

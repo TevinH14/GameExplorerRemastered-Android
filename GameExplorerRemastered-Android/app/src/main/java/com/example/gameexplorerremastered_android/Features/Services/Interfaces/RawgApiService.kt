@@ -1,6 +1,6 @@
 package com.example.gameexplorerremastered_android.Features.Services.Interfaces
 
-import com.example.gameexplorerremastered_android.Features.Games.model.RawgResponse
+import com.example.gameexplorerremastered_android.features.games.model.RawgResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 interface RawgApiService {

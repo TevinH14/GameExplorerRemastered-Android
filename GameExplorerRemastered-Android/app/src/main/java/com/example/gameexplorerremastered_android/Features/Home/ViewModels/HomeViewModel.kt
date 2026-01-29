@@ -1,4 +1,4 @@
-package com.example.gameexplorerremastered_android.Features.Home.ViewModels
+package com.example.gameexplorerremastered_android.features.Home.ViewModels
 
 class HomeViewModel {
 }

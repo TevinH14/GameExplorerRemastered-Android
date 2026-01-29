@@ -1,26 +1,27 @@
-package com.example.gameexplorerremastered_android.Features.Games.ViewModels
+package com.example.gameexplorerremastered_android.features.games.viewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.gameexplorerremastered_android.Features.Services.RetrofitInstance
-import com.example.gameexplorerremastered_android.Features.Games.model.Game
+import com.example.gameexplorerremastered_android.BuildConfig
+import com.example.gameexplorerremastered_android.resourses.Services.RetrofitInstance
+import com.example.gameexplorerremastered_android.features.games.model.Game
+import kotlinx.coroutines.Dispatchers
 
 class GamesViewModel: ViewModel() {
 
     private val _game = MutableLiveData<List<Game>>()
-
     val games: LiveData<List<Game>> = _game
 
-    private val apiKey = ""
-
     fun fetchGames() {
-        viewModelScope.launch {
+        // Use Dispatchers.IO for network/disk operations
+        viewModelScope.launch(Dispatchers.IO) {
             try {
-                val response = RetrofitInstance.api.getGames(apiKey)
-                _game.value = response.results
+                // Your actual network call (e.g., using Retrofit)
+                val response = RetrofitInstance.api.getGames()
+                _game.postValue(response.results)
             } catch (e: Exception) {
                 e.printStackTrace()
             }
