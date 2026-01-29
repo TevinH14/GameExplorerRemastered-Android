@@ -1,3 +1,0 @@
-package com.example.gameexplorerremastered_android.Features
-
-class Ratings
