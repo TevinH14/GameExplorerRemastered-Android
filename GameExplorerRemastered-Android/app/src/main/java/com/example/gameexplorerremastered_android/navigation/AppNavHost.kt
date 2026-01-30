@@ -14,16 +14,16 @@ fun AppNavHost(navController: NavHostController, modifier: Modifier = Modifier) 
 
     NavHost(
         navController = navController,
-        startDestination = Screen.Home.route,  // The default screen shown when app starts
+        startDestination = DrawerScreen.Home.route,  // The default screen shown when app starts
         modifier = modifier
     ) {
         // Home screen entry
-        composable(Screen.Home.route) {
+        composable(DrawerScreen.Home.route) {
             HomeScreen(navController)   // Pass navController down to children
         }
 
         // Settings screen entry
-        composable(Screen.Settings.route) {
+        composable(DrawerScreen.Settings.route) {
             SettingsScreen()
         }
 
