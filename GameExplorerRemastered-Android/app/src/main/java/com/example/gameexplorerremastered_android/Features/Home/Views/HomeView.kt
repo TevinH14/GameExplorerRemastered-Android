@@ -26,11 +26,11 @@ fun HomeScreen(navController: NavController) {
     val viewModel: GamesViewModel = viewModel()
 
     // Convert LiveData to Compose State so UI updates auto-magically
-    val games by viewModel.games.observeAsState(emptyList())
+    val games by viewModel.recentReleasedGames.observeAsState(emptyList())
 
     // Ensures fetchGames() runs *only once* when screen loads
     LaunchedEffect(Unit) {
-        viewModel.fetchGames()
+        viewModel.fetchRecentReleasedGames()
     }
 
     // Main UI for Home Screen
