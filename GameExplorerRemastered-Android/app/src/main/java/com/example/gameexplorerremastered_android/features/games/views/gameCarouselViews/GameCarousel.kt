@@ -37,6 +37,7 @@ fun GameCarousel(
         // Top space
         GameSpace(height = 24)
 
+        //header text view
         GameText(
             text = header,
             font = GameFont.Title,
