@@ -63,10 +63,12 @@ fun DrawerApp() {
         // App top-level scaffold layout (toolbar + body)
         Scaffold(
             topBar = {
+                //  dynamic title
+                val title = currentScreenTitle(navController)
 
                 // Top App Bar with menu icon
                 TopAppBar(
-                    title = { Text("Game Explorer") },
+                    title = { Text(title) },
                     navigationIcon = {
 
                         // Icon that opens the drawer
