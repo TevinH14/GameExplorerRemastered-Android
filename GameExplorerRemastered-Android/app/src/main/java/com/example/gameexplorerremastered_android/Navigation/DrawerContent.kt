@@ -17,7 +17,7 @@ fun DrawerContent(onDestinationClicked: (String) -> Unit) {
     ModalDrawerSheet {
         // Drawer Header Title
         Text(
-            text = "Menu",
+            text =
             style = MaterialTheme.typography.titleLarge,
             modifier = Modifier
                 .padding(16.dp)
@@ -28,12 +28,12 @@ fun DrawerContent(onDestinationClicked: (String) -> Unit) {
         NavigationDrawerItem(
             label = { Text("Home") },
             selected = false,
-            onClick = { onDestinationClicked(Screen.Home.route) }
+            onClick = { onDestinationClicked(DrawerScreen.Home.route) }
         )
         NavigationDrawerItem(
             label = { Text("Settings") },
             selected = false,
-            onClick = { onDestinationClicked(Screen.Settings.route) }
+            onClick = { onDestinationClicked(DrawerScreen.Settings.route) }
         )
         NavigationDrawerItem(
             label = { Text("Profile") },
