@@ -25,7 +25,7 @@ fun DisplayCardView(
         Box(
             modifier = Modifier
                 .height(140.dp)
-                .fillMaxWidth()
+                .width(250.dp)
         ) {
             DisplayImage(url = imageUrl)
         }
