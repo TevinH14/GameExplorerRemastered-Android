@@ -1,4 +1,4 @@
-# Game Explorer Remastered (Android)
+# 🎮 Game Explorer Remastered (Android)
 
 Game Explorer Remastered is a modern Android application built with **Kotlin** and **Jetpack Compose** that allows users to explore video games using the **RAWG Video Games Database API**. The app focuses on clean architecture, modern Android best practices, and scalability.
 
@@ -43,7 +43,7 @@ This project is designed as a **portfolio-grade Android app** showcasing mid-to-
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 app/
@@ -123,7 +123,7 @@ app/
 
 ---
 
-## API Configuration
+## 🔑 API Configuration
 
 This app uses the **RAWG API**.
 
@@ -184,11 +184,12 @@ Add internet permission in `AndroidManifest.xml`:
 ---
 
 ## Roadmap
+* 🔐 User authentication
 * 📱 Display games
 * 📲 Detailed View
 * 🔎 Search games
-* ❤️ Favorite games (Room database)
-* 🌙 Dark mode
+* ❤️ ❤️ Favorites & saved games (Room database)
+* 🌙 Dark mode enhancements
 * 📡 Paging 3 integration
 * 🔐 Hilt dependency injection
 * 🧪 Full test coverage
@@ -200,14 +201,25 @@ Add internet permission in `AndroidManifest.xml`:
 * Modern Android development with Jetpack Compose
 * Clean separation of concerns
 * Scalable architecture
+* modularity components
 * Real-world API integration
 * Production-ready project structure
 
 ---
 
-## License
+## 📜 License
 
 This project is for educational and portfolio purposes.
+
+This project is licensed under the MIT License — feel free to use, modify, and distribute.
+
+---
+
+### 🙌 Acknowledgements
+
+RAWG Video Games Database
+
+Apple SwiftUI Documentation
 
 ---
 
@@ -219,7 +231,6 @@ Android & iOS Mobile Engineer
 ###Links
 
 [GitHub TevinH14 ](http://daringfireball.net/projects/markdown/syntax)
-
 
 [Linkedin Porfilo ](https://www.linkedin.com/in/tevin-hamilton-253558141/)
 
