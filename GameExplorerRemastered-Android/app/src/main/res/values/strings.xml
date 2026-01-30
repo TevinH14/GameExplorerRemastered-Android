@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">GameExplorerRemastered-Android</string>
+
+    <!-- core -->
+    <string name="app_name">Game Explorer</string>
+
+    <!-- Drawer titles -->
+    <string name="drawer_Menu_header">Menu</string>
+    <string name="drawer_home">Home</string>
+    <string name="drawer_games">Games</string>
+    <string name="drawer_profile">Profile</string>
+    <string name="drawer_settings">Settings</string>
+    
+    <!-- Home Headers -->
+    <string name="recently_released_header">Recently Released</string>
+    <string name="trending_games_headers">Trending Games</string>
+    <string name="upcoming_header">Upcoming Released</string>
+    <string name="favorite_header">Favorites</string>
+    <string name="wishlist_header">Wishlist</string>
+
+    <!-- Sub Headers -->
+
+    <!-- filter games titles -->
+    <string name="filter_games_title">Filter Games</string> -->
+
+
+    <!-- Error messages -->
+    <string name="error_no_games_found">No games found.</string>
+
+
+
 </resources>
