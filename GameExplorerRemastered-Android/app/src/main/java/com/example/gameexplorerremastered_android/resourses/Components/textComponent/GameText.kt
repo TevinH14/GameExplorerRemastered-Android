@@ -16,11 +16,11 @@ import androidx.compose.material3.Text
     text: String,
     font: GameFont,
     alignment: Alignment.Horizontal = Alignment.CenterHorizontally,
-    width: Dp? = null
+    width: Dp? = null,
+    modifier: Modifier = Modifier
     ) {
         Box(
-            modifier = Modifier
-                .then(if (width != null) Modifier.width(width) else Modifier.fillMaxWidth()),
+            modifier = modifier,
             contentAlignment = when (alignment) {
                 Alignment.Start -> Alignment.CenterStart
                 Alignment.End -> Alignment.CenterEnd
