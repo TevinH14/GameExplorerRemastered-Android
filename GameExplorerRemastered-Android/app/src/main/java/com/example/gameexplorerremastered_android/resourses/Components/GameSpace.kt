@@ -7,6 +7,12 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun GameSpace(height: Int) {
-    Spacer(modifier = Modifier.height(height.dp))
+fun GameSpace(
+    height: Int = 8,
+    width: Int = 8
+) {
+    Spacer(modifier = Modifier
+        .height(height.dp)
+        .width(width.dp)
+    )
 }
