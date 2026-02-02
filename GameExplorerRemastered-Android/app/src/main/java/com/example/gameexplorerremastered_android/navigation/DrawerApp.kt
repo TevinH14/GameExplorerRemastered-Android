@@ -13,6 +13,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
@@ -30,6 +32,9 @@ fun DrawerApp() {
 
     // Navigation graph controller
     val navController = rememberNavController()
+
+    // State for dynamic title
+    val topBarTitle = remember { mutableStateOf("Game Explorer") }
 
     // Container that manages the drawer + main app content
     ModalNavigationDrawer(
@@ -64,7 +69,7 @@ fun DrawerApp() {
         Scaffold(
             topBar = {
                 //  dynamic title
-                val title = currentScreenTitle(navController)
+                val title = topBarTitle.value
 
                 // Top App Bar with menu icon
                 TopAppBar(
@@ -87,7 +92,8 @@ fun DrawerApp() {
             // Hosting our navigation graph here
             AppNavHost(
                 navController = navController,
-                modifier = Modifier.padding(innerPadding)
+                modifier = Modifier.padding(innerPadding),
+                topBarTitle = topBarTitle
             )
         }
     }

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
@@ -20,13 +21,15 @@ import com.example.gameexplorerremastered_android.features.games.viewModels.Game
 import com.example.gameexplorerremastered_android.features.games.views.gameCarouselViews.GameCarousel
 
 @Composable
-fun HomeScreen(navController: NavController) {
+fun HomeScreen(navController: NavController, topBarTitle: MutableState<String>) {
 
     // Retrieve the ViewModel scoped to the current navigation graph
     val viewModel: GamesViewModel = viewModel()
 
     // Convert LiveData to Compose State so UI updates auto-magically
     val games by viewModel.recentReleasedGames.observeAsState(emptyList())
+
+    topBarTitle.value = "Home"
 
     // Ensures fetchGames() runs *only once* when screen loads
     LaunchedEffect(Unit) {
@@ -56,3 +59,4 @@ fun HomeScreen(navController: NavController) {
     fun ProfileScreen() {
         Surface { Text("👤 Profile Screen") }
     }
+
