@@ -37,7 +37,7 @@ enum class GameFont {
             )
             PrimaryButton, SecondaryButton -> TextStyle(
                 fontSize = 18.sp,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.Normal,
                 fontFamily = FontFamily.Default
             )
             Picker -> TextStyle(
@@ -72,7 +72,8 @@ enum class GameFont {
     fun color(): Color {
         return when (this) {
             Description -> Color.Gray
-            PrimaryButton, SubTitle, WhiteInfo -> Color.White
+            PrimaryButton, SubTitle, WhiteInfo -> Color.Blue
+            SecondaryButton -> Color.White
             Error -> Color.Red
             else -> Color.Black
         }
